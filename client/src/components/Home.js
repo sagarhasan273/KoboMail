@@ -19,7 +19,7 @@ function Home() {
             })
         });
         
-        console.log(res);
+        console.log(res.json());
     }
 
   return (
