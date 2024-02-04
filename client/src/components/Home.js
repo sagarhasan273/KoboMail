@@ -6,8 +6,8 @@ import Form from "react-bootstrap/Form";
 function Home() {
     const [email, setEmail] = useState("");
 
-    const sendEmail = async (e) => {
-        e.preventdefault();
+    const sendEmail = async(e) => {
+        e.preventDefault();
 
         const res = await fetch("/register", {
             method: "POST",
@@ -41,7 +41,7 @@ function Home() {
               <Form.Control type="email" onChange={(e)=>setEmail(e.target.value)} placeholder="Enter email" />
             </Form.Group>
             
-            <Button variant="primary" type="submit" onChange={sendEmail}>
+            <Button variant="primary" type="submit" onClick={sendEmail}>
               Submit
             </Button>
           </Form>
